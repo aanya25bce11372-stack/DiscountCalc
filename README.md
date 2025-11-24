@@ -1,40 +1,48 @@
-#Discount Calculator for Online Sales
+Problem definition:
+Build a simple command-line Python tool that takes an order total and a discount percentage, then shows the discount amount and final payable amount for online sales. It helps shoppers and small sellers quickly verify savings and final price.
 
-def calculate_discount(amount, discount_percent):
-    """Calculate discount amount and final price."""
-    discount_amount = amount * discount_percent / 100
-    final_price = amount - discount_amount
-    return discount_amount, final_price
-def main():
-    print("=== Online Sales Discount Calculator ===")
+Requirement analysis:
 
-    #Step 1: Get user input
-    try:
-        amount = float(input("Enter order amount: "))
-        discount_percent = float(input("Enter discount percentage: "))
-    except ValueError:
-        print("Error: Please enter numeric values only.")
-        return
+Functional: Read order amount and discount percentage (0–100), validate that both are non‑negative and percentage ≤ 100, compute discount and final price, and display all values clearly.
 
-    #Step 2: Validate input
-    if amount < 0:
-        print("Error: Order amount cannot be negative.")
-        return
+Non‑functional: Use clear names and comments, handle invalid and non‑numeric inputs gracefully, and keep the code beginner‑friendly for standard Python 3.
 
-    if discount_percent < 0 or discount_percent > 100:
-        print("Error: Discount percentage must be between 0 and 100.")
-        return
+Top‑down design / modularization:
 
-    #Step 3: Calculate discount and final price
-    discount_amount, final_price = calculate_discount(amount, discount_percent)
+Read inputs.
 
-    #Step 4: Display results
-    print("\n--- Bill Summary ---")
-    print(f"Original amount : {amount:.2f}")
-    print(f"Discount ({discount_percent:.2f}%) : {discount_amount:.2f}")
-    print(f"Final amount to pay : {final_price:.2f}")
+Validate inputs.
 
+Calculate discount amount and final price.
 
-#Program entry point
-if __name__ == "__main__":
-    main()
+Display results.
+Use functions: get_inputs(), calculate_discount(amount, discount_percent), print_summary(amount, discount_percent, discount_amount, final_price), with main() coordinating the flow.
+
+Algorithm development:
+
+Input: amount, discount_percent.
+
+Process:
+
+discount_amount = amount * discount_percent / 100
+
+final_price = amount - discount_amount
+
+Output: discount_amount, final_price.
+Validation: show an error and stop if amount < 0 or discount_percent is outside 0–100.
+
+Testing and refinement:
+
+Tests:
+
+amount = 1000, discount = 0 → discount 0, final 1000.
+
+amount = 2500, discount = 20 → discount 500, final 2000.
+
+amount = 999.99, discount = 100 → discount 999.99, final 0.
+
+Negative or out‑of‑range values and non‑numeric inputs should trigger error messages.
+
+Future improvements: support multiple items, automatic discount tiers, coupon codes, and flat discounts.
+
+Related
