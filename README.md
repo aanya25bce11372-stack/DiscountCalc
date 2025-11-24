@@ -45,4 +45,3 @@ Negative or out‑of‑range values and non‑numeric inputs should trigger erro
 
 Future improvements: support multiple items, automatic discount tiers, coupon codes, and flat discounts.
 
-Related
