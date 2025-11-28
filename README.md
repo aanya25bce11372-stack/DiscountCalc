@@ -1,5 +1,5 @@
 Problem definition:
-Build a simple command-line Python tool that takes an order total and a discount percentage, then shows the discount amount and final payable amount for online sales. It helps shoppers and small sellers quickly verify savings and final price.
+A simple command-line Python tool that takes an order total and a discount percentage, then shows the discount amount and final payable amount for online sales. It helps shoppers and small sellers quickly verify savings and final price.
 
 Requirement analysis:
 
