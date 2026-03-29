@@ -3,7 +3,7 @@ A simple command-line Python tool that takes an order total and a discount perce
 
 Requirement analysis:
 
-Functional: Read order amount and discount percentage (0–100), validate that both are non‑negative and percentage ≤ 100, compute discount and final price, and display all values clearly.
+Functional: Read order amount and discount percentage (0–100), validate that both are non‑negative and percentage ≤ 100,  compute discount and final price, and display all values clearly.
 
 Non‑functional: Use clear names and comments, handle invalid and non‑numeric inputs gracefully, and keep the code beginner‑friendly for standard Python 3.
 
